@@ -2,15 +2,17 @@ server:
   port: 8000
 
 spring:
+  application:
+    name: demo-privider
   jpa:
     generate-ddl: false
     show-sql: true
     hibernate:
       ddl-auto: none
-      datasource:
-        platform: h2
-        schema: classpath:schema.sql
-        data: classpath:data.sql
+      datasource: #指定数据源
+        platform: h2 #指定数据库
+        schema: classpath:schema.sql #指定建表
+        data: classpath:data.sql #指定数据
 
 logging:
   level:
